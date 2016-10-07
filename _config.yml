@@ -1,0 +1,18 @@
+# Site settings
+title: login.gov
+description: Usability testing
+baseurl: '/identity-usability-testing'
+url: 'https://pages.18f.gov'
+
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+
+exclude:
+  - node_modules
+
+# Addons
+gems:

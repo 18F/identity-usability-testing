@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="site sm-bg-light-blue">
+    <div class="site-wrap">
+      <div class="py1 bg-navy white fs-12p line-height-1 center">
+        <img alt="US flag" class="mr-tiny" src="{{ "/images/us-flag.png" | prepend: site.baseurl }}" width="13" height="9">An official website of the United States government
+      </div>
+      {% include nav.html %}
+      {{ content }}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

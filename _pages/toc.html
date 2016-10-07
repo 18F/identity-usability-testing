@@ -1,0 +1,22 @@
+---
+layout: default
+title: Table of contents
+permalink: /toc/
+toc: false
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
+    <h1 class="heading">
+      Table of contents
+    </h1>
+    <ul>
+      {% for page in site.pages %}
+        {% if page.toc != false %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+// supplemental utility classes
+
+.w-60p { width: 60px; }
+
+.bg-light-blue { background-color: $blue-light; }
+
+@media #{$breakpoint-sm} {
+  .sm-bg-light-blue { background-color: $blue-light; }
+
+  .sm-left-align { text-align: left; }
+  .sm-right-align { text-align: right; }
+}

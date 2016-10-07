@@ -1,0 +1,24 @@
+---
+layout: default
+title: Two-factor authentication setup
+permalink: /phone_setup/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
+    <h1 class="h3 my0">
+      Extra protection for your account
+    </h1>
+    <p class="mt-tiny mb0" id="2fa-description">
+      Every time you log in, a one-time passcode will be sent to your phone via SMS or with a phone call. Please enter the phone number you would like to use to receive these messages.
+    </p>
+    <form autocomplete="off" role="form" class="simple_form mt4 new_two_factor_setup_form" id="new_two_factor_setup_form" action="/phone_setup" accept-charset="UTF-8" method="post">
+      <div class="mb2 tel required two_factor_setup_form_phone"><label class="tel required bold" for="two_factor_setup_form_phone"><abbr title="required" class="red display-none">*</abbr>  Phone Number</label><input aria-describedby="2fa-description" class="string tel required block col-12 field" required="required" aria-required="true" type="tel" name="two_factor_setup_form[phone]" id="two_factor_setup_form_phone" autocapitalize="off"></div>
+      <div class="mb3"><label class="block bold" for="two_factor_setup_form_otp_method">Delivery method</label><label class="radio mb0 mr3"><input type="radio" name="two_factor_setup_form[otp_method]" id="two_factor_setup_form_otp_method_sms" value="sms" checked="checked"><span class="indicator"></span>Text message (SMS)</label><label class="radio mb0"><input type="radio" name="two_factor_setup_form[otp_method]" id="two_factor_setup_form_otp_method_voice" value="voice"><span class="indicator"></span>Phone call</label></div>
+      <input type="submit" name="commit" value="Send one-time passcode" class="btn btn-primary">
+      <p class="mt3 mb1 italic">
+        Note: By accepting these terms and conditions, you acknowledge that Standard Messaging Rates or other charges related to these notifications may apply.
+      </p>
+    </form>
+  </div>
+</div>

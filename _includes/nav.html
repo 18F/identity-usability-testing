@@ -1,0 +1,29 @@
+<nav class="bg-white">
+  <div class="container px2 py3">
+    <div class="clearfix">
+      <div class="sm-col mb1 sm-m0">
+        <a class="inline-block" href="{{ "/" | prepend: site.baseurl }}"><img alt="login.gov" class="align-bottom" width="170" src="{{ "/images/logo.svg" | prepend: site.baseurl }}"></a>
+        <div class="mt-12p h6 sm-show caps">
+          <a class="mr3 gray" href="{{ "/" | prepend: site.baseurl }}">About</a><a class="mr3 gray" href="{{ "/" | prepend: site.baseurl }}">News</a><a class="mr3 gray" href="{{ "/" | prepend: site.baseurl }}">Contact</a>
+        </div>
+      </div>
+      <div class="sm-col-right sm-right-align">
+        {% if page.logged_in == true %}
+          <div>
+            Welcome <strong>test@test.com</strong>
+          </div>
+          <div class="mt-12p h6">
+            <a class="underline" href="/profile">My account</a><span class="px1 silver">|</span><a class="underline" href="/api/saml/logout">Sign out</a>
+          </div>
+        {% else %}
+          <div class="sm-show">
+            &nbsp;
+          </div>
+          <div class="mt-12p h6">
+            <a class="underline" href="{{ "/" | prepend: site.baseurl }}">Log in</a><span class="px-tiny">or</span><a class="underline" href="{{ "/start" | prepend: site.baseurl }}">Sign up</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

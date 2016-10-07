@@ -1,0 +1,37 @@
+---
+layout: default
+title: Enter the secure one-time passcode
+permalink: /login/two-factor/sms/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
+    <div class="mxn2 sm-mxn6 sm-mtn3">
+      <div class="px2 py1 sm-px6 mb-40p h5 line-height-2 alert alert-success" role="alert">
+        <div class="alert-inner">
+          Your one-time passcode has been sent via text message.
+        </div>
+      </div>
+    </div>
+    <h1 class="h3 my0">
+      Enter the passcode we sent you
+    </h1>
+    <p class="mt-tiny mb0" id="code-instructs">
+      Please enter the code sent to <strong>***-***-2342</strong>.
+    </p>
+    <form role="form" class="mt4" action="{{ "/profile/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <label class="block bold" for="code"><abbr title="required" class="red display-none">*</abbr> One-time passcode</label>
+      <div class="col-12 sm-col-5 mb4 sm-mb0 sm-mr-20p inline-block">
+        <input type="number" name="code" id="code" value="974587" required="required" class="col-12 field mfa" autofocus="autofocus" aria-describedby="code-instructs">
+      </div><input type="submit" name="commit" value="Submit" class="btn btn-primary align-top">
+    </form>
+    <div class="mt3 mb1">
+      <p class="mb1">
+        <a href=".">Call me with the code instead</a>
+      </p>
+      <p class="mb1">
+        Didn't receive a code? <a href=".">Send a new one</a>
+      </p>
+    </div>
+  </div>
+</div>

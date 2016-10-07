@@ -1,0 +1,30 @@
+$alert-ico-size: .75rem;
+
+.alert {
+  background-color: #fff1d1;
+  color: #fdb81e;
+}
+
+.alert-inner {
+  background-image: url('../images/alert/ico-shield.svg');
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: $alert-ico-size $alert-ico-size;
+  padding-left: $alert-ico-size + $space-1;
+}
+
+.alert-notice,
+.alert-success {
+  background-color: #f0faed;
+  color: #088a22;
+
+  .alert-inner { background-image: url('../images/alert/ico-check.svg'); }
+}
+
+.alert-error,
+.alert-alert {
+  background-color: #ffe7eb;
+  color: #e32042;
+
+  .alert-inner { background-image: url('../images/alert/ico-exclamation.svg'); }
+}
