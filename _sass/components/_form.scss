@@ -129,3 +129,59 @@ input::-webkit-inner-spin-button {
 .radio input:checked ~ .indicator {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
 }
+
+
+[class*="floating-container"] {
+  input {
+    background: $blue-light no-repeat $space-2 center;
+    background-size: $space-3;
+    border: 1px solid $white;
+    font-size: $base-font-size;
+    padding: $space-3 $space-2 $space-3 $space-5;
+
+    &:not(.empty),
+    &:focus {
+      background: none;
+      border: 1px solid $blue;
+      color: $gray;
+      font-size: 20px;
+      outline: none;
+      padding-left: $space-2;
+
+      & + label {
+        opacity:1;
+        top:-10px;
+      }
+    }
+  }
+
+  label {
+    background: $white no-repeat 2px center;
+    background-size: 20px;
+    font-size: $h6;
+    left: 24px;
+    opacity:0;
+    padding: 0 2px 0 26px;
+    position: absolute;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    top: 10px;
+  }
+}
+
+.floating-container--auto input,
+.floating-container--auto label { 
+  background-image: url("../images/auto.svg");
+}
+.floating-container--credit input,
+.floating-container--credit label {
+  background-image: url("../images/credit.svg");
+}
+.floating-container--heloc input,
+.floating-container--heloc label {
+  background-image: url("../images/heloc.svg");
+}
+.floating-container--mortgage input,
+.floating-container--mortgage label {
+  background-image: url("../images/mortgage.svg");
+}

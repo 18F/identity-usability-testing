@@ -8,12 +8,6 @@
   <title>{{ site.title | escape }} - {% if page.title %}{{ page.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines }}{% endif %}">
   <link rel="stylesheet" media="all" href="{{ "/css/main.css" | prepend: site.baseurl }}" type="text/css">
-  <link href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}" rel="apple-touch-icon" sizes="180x180">
-  <link href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}" rel="icon" sizes="32x32" type="image/png">
-  <link href="{{ "/favicon-16x16.png" | prepend: site.baseurl }}" rel="icon" sizes="16x16" type="image/png">
-  <link href="{{ "/manifest.json" | prepend: site.baseurl }}" rel="manifest">
-  <link color="#E21C3D" href="{{ "/safari-pinned-tab.svg" | prepend: site.baseurl }}" rel="mask-icon">
-  <meta content="#ffffff" name="theme-color">
   <!--[if lt IE 9]>
     <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
     <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>

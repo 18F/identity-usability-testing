@@ -1,24 +1,32 @@
 import $ from 'jquery';
 
-import './app/pw-toggle';
-import './app/pw-strength';
+// import './app/pw-toggle';
+// import './app/pw-strength';
 import './app/form-validation';
 import './app/form-field-format';
 import './app/idv-finance-helper';
 
-// Swap in any query string values
-var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
-var queryString = location.search.substring(1); 
-var keyValues = queryString.split('&'); 
 
-for(var i in keyValues) { 
-  var key = keyValues[i].split('=');
-  if (key.length > 1) {
-    var k = decode(key[0]);
-    var v = decode(key[1]);
-    var el = document.getElementById(k);
-    if(el){
-      el.innerHTML = v;
+import { TextField } from 'field-kit';
+
+const inputs = document.querySelectorAll("[class*='floating-container'] input");
+
+for (let i = 0; i < inputs.length; i++) {
+  const parent = inputs[i].parentNode;
+  const label = parent.querySelector('label');
+  const input = new TextField(inputs[i]);
+
+  input.setFocusedPlaceholder('');
+  input.setUnfocusedPlaceholder(label.textContent);
+
+  input.setDelegate({
+    textFieldDidEndEditing: function(input) {
+      if(input.value() == ''){
+        inputs[i].classList.add('empty');
+      } else {
+        inputs[i].classList.remove('empty');
+      }
     }
-  }
-} 
+  });
+
+}
