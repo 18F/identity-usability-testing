@@ -133,55 +133,61 @@ input::-webkit-inner-spin-button {
 
 [class*="floating-container"] {
   input {
-    background: $blue-light no-repeat $space-2 center;
-    background-size: $space-3;
-    border: 1px solid $white;
+    color: transparent;
     font-size: $base-font-size;
-    padding: $space-3 $space-2 $space-3 $space-5;
+    font-weight: normal;
+    padding: $space-3 $space-2;
+    transition: 0.4s ease-in-out;
 
-    &:not(.empty),
+    &:hover {
+      border-color: #00BFE7;
+    }
+
+    &.active,
     &:focus {
-      background: none;
+      background-color: $white;
       border: 1px solid $blue;
+      box-shadow: none;
       color: $gray;
       font-size: 20px;
       outline: none;
-      padding-left: $space-2;
 
       & + label {
-        opacity:1;
-        top:-10px;
+        background-color: $white;
+        background-position: 4px center;
+        background-size: 20px;
+        font-size: $h6;
+        left: 24px;
+        outline: none;
+        padding: 0 4px 0 30px;
+        top: -10px;
       }
     }
   }
 
   label {
-    background: $white no-repeat 2px center;
-    background-size: 20px;
-    font-size: $h6;
-    left: 24px;
-    opacity:0;
-    padding: 0 2px 0 26px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: $space-3;
+    font-size: $base-font-size;
+    left: $space-2;
+    padding: 3px 2px 3px $space-4;
     position: absolute;
     pointer-events: none;
-    transition: 0.2s ease-in-out;
-    top: 10px;
+    transition: 0.4s ease-in-out;
+    top: 18px;
   }
 }
 
-.floating-container--auto input,
 .floating-container--auto label { 
   background-image: url("../images/auto.svg");
 }
-.floating-container--credit input,
 .floating-container--credit label {
   background-image: url("../images/credit.svg");
 }
-.floating-container--heloc input,
 .floating-container--heloc label {
   background-image: url("../images/heloc.svg");
 }
-.floating-container--mortgage input,
 .floating-container--mortgage label {
   background-image: url("../images/mortgage.svg");
 }
