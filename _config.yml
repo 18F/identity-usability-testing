@@ -1,8 +1,7 @@
 # Site settings
 title: login.gov
 description: Usability testing
-baseurl: '/identity-usability-testing'
-url: 'https://pages.18f.gov'
+baseurl: ""
 
 include: ['_pages']
 
@@ -13,6 +12,4 @@ sass:
 
 exclude:
   - node_modules
-
-# Addons
-gems:
+  - manifest.yml
