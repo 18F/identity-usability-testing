@@ -35,25 +35,27 @@ function analyzePw() {
   const input = document.querySelector(
     '#password_form_password, #update_user_password_form_password'
   );
-  const pwCntnr = document.getElementById('pw-strength-cntnr');
-  const pwStrength = document.getElementById('pw-strength-txt');
-  const pwFeedback = document.getElementById('pw-strength-feedback');
+  if (input) {
+    const pwCntnr = document.getElementById('pw-strength-cntnr');
+    const pwStrength = document.getElementById('pw-strength-txt');
+    const pwFeedback = document.getElementById('pw-strength-feedback');
 
-  // the pw strength module is hidden by default ("hide" CSS class)
-  // (so that javascript disabled browsers won't see it)
-  // thus, first step is unhiding it
-  pwCntnr.className = '';
+    // the pw strength module is hidden by default ("hide" CSS class)
+    // (so that javascript disabled browsers won't see it)
+    // thus, first step is unhiding it
+    pwCntnr.className = '';
 
-  input.addEventListener('keyup', function(e) {
-    const z = zxcvbn(e.target.value);
+    input.addEventListener('keyup', function(e) {
+      const z = zxcvbn(e.target.value);
 
-    const [cls, strength] = getStrength(z);
-    const feedback = getFeedback(z);
+      const [cls, strength] = getStrength(z);
+      const feedback = getFeedback(z);
 
-    pwCntnr.className = cls;
-    pwStrength.innerHTML = strength;
-    pwFeedback.innerHTML = feedback;
-  });
+      pwCntnr.className = cls;
+      pwStrength.innerHTML = strength;
+      pwFeedback.innerHTML = feedback;
+    });
+  }
 }
 
 

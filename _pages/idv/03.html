@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Financial
-permalink: /financial/
+title: Next, provide a financial account number
+permalink: /idv/finance/
 ---
 
 <div class="container sm-pt4">
@@ -12,7 +12,7 @@ permalink: /financial/
     <p class="mt-tiny mb0">
       You are not sharing account balances or transaction details, and we will never charge any fees.
     </p>
-    <form autocomplete="off" role="form" class="simple_form mt4" action="." accept-charset="UTF-8">
+    <form autocomplete="off" role="form" class="simple_form mt4" action="{{ "/idv/phone" | prepend: site.baseurl }}" accept-charset="UTF-8">
       <div class="mb2 bold">Select one of the following:</div>
 
       <div class="mb2 required relative floating-container--credit">
@@ -36,6 +36,9 @@ permalink: /financial/
       </div>            
 
       <input type="submit" value="Continue" class="mt3 btn btn-primary btn-wide">
+      <div class="mt1">
+        <a class="underline" href="{{ "/idv/cancel" | prepend: site.baseurl }}">Cancel verification</a>
+      </div>
     </form>
   </div>
 </div>

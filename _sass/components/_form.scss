@@ -1,5 +1,14 @@
 $radio-checkbox-space: 1.5rem;
 
+@media #{$breakpoint-sm} {
+  input,
+  select,
+  textarea,
+  fieldset {
+    font-size: $form-field-font-size-sm;
+  }
+}
+
 label {
   display: inline-block;
   margin-bottom: $space-tiny;
@@ -29,7 +38,7 @@ textarea {
 .invalid,
 .interacted.required,
 .has-error input {
-  background-image: url('../images/alert/ico-exclamation.svg');
+  background-image: url(image-path('alert/ico-exclamation.svg'));
   background-position: center right $form-field-padding-x;
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
@@ -128,66 +137,4 @@ input::-webkit-inner-spin-button {
 
 .radio input:checked ~ .indicator {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
-}
-
-
-[class*="floating-container"] {
-  input {
-    color: transparent;
-    font-size: $base-font-size;
-    font-weight: normal;
-    padding: $space-3 $space-2;
-    transition: 0.4s ease-in-out;
-
-    &:hover {
-      border-color: #00BFE7;
-    }
-
-    &.active,
-    &:focus {
-      background-color: $white;
-      border: 1px solid $blue;
-      box-shadow: none;
-      color: $gray;
-      font-size: 20px;
-      outline: none;
-
-      & + label {
-        background-color: $white;
-        background-position: 4px center;
-        background-size: 20px;
-        font-size: $h6;
-        left: 24px;
-        outline: none;
-        padding: 0 4px 0 30px;
-        top: -10px;
-      }
-    }
-  }
-
-  label {
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: $space-3;
-    font-size: $base-font-size;
-    left: $space-2;
-    padding: 3px 2px 3px $space-4;
-    position: absolute;
-    pointer-events: none;
-    transition: 0.4s ease-in-out;
-    top: 18px;
-  }
-}
-
-.floating-container--auto label { 
-  background-image: url("../images/auto.svg");
-}
-.floating-container--credit label {
-  background-image: url("../images/credit.svg");
-}
-.floating-container--heloc label {
-  background-image: url("../images/heloc.svg");
-}
-.floating-container--mortgage label {
-  background-image: url("../images/mortgage.svg");
 }

@@ -2,11 +2,10 @@
 layout: default
 title: Just in case
 permalink: /settings/recovery-code/
-logged_in: true
 ---
 
 <div class="container sm-pt4">
-  <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
     <div class="mxn2 sm-mxn6 sm-mtn3">
       <div class="px2 py1 sm-px6 mb-40p h5 line-height-2 alert alert-success" role="alert">
         <div class="alert-inner">
@@ -21,10 +20,11 @@ logged_in: true
       Below is the recovery code that we have generated for you. You can use this code to access your account in case you lose access to your phone. Make sure to print and/or write down this code and keep it in a safe place.
     </p>
     <div class="mt4 mb4 py2 px3 inline-block fs-20p border border-dashed monospace">
-      07e798e9c23da4db
+      84a47f6b20e69e2d
     </div>
-    <form class="button_to" method="post" action="/acknowledge_recovery_code">
+    <form class="button_to" action="{{ "/idv" | prepend: site.baseurl }}">
       <input class="btn btn-primary btn-wide mb1" type="submit" value="Continue">
     </form>
   </div>
 </div>
+

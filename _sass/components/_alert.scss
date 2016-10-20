@@ -6,8 +6,8 @@ $alert-ico-size: .75rem;
 }
 
 .alert-inner {
-  background-image: url('../images/alert/ico-shield.svg');
-  background-position: center left;
+  background-image: url('/images/alert/ico-shield.svg');
+  background-position: left top 3px; // 3px top cushion looks more centered
   background-repeat: no-repeat;
   background-size: $alert-ico-size $alert-ico-size;
   padding-left: $alert-ico-size + $space-1;
@@ -18,7 +18,7 @@ $alert-ico-size: .75rem;
   background-color: #f0faed;
   color: #088a22;
 
-  .alert-inner { background-image: url('../images/alert/ico-check.svg'); }
+  .alert-inner { background-image: url('/images/alert/ico-check.svg'); }
 }
 
 .alert-error,
@@ -26,5 +26,5 @@ $alert-ico-size: .75rem;
   background-color: #ffe7eb;
   color: #e32042;
 
-  .alert-inner { background-image: url('../images/alert/ico-exclamation.svg'); }
+  .alert-inner { background-image: url('/images/alert/ico-exclamation.svg'); }
 }

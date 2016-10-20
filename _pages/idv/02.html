@@ -1,0 +1,261 @@
+---
+layout: default
+title: First, tell us about yourself
+permalink: /idv/session/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h2 class="h3 my0 pb0">
+      First, tell us about yourself
+    </h2>
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt4 new_profile" id="new_profile" action="{{ "/idv/finance" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <div class="mb5">
+        <div class="mb3 pb-tiny border-bottom border-teal">
+          Full name
+        </div>
+        <div class="mb3 string required profile_first_name">
+          <label class="string required bold" for="profile_first_name"><abbr title="required" class="red display-none">*</abbr> First name</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[first_name]" id="profile_first_name">
+        </div>
+        <div class="mb3 string required profile_last_name">
+          <label class="string required bold" for="profile_last_name"><abbr title="required" class="red display-none">*</abbr> Last name</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[last_name]" id="profile_last_name">
+        </div>
+      </div>
+      <div class="mb4">
+        <div class="mb3 pb-tiny border-bottom border-teal">
+          Mailing address
+        </div>
+        <div class="mb3 string required profile_address1">
+          <label class="string required bold" for="profile_address1"><abbr title="required" class="red display-none">*</abbr> Street address 1</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[address1]" id="profile_address1">
+        </div>
+        <div class="mb3 string optional profile_address2">
+          <label class="string optional bold" for="profile_address2">Street address 2 (optional)</label><input class="string optional block col-12 field" type="text" name="profile[address2]" id="profile_address2">
+        </div>
+        <div class="mb3 string required profile_city">
+          <label class="string required bold" for="profile_city"><abbr title="required" class="red display-none">*</abbr> City</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[city]" id="profile_city">
+        </div>
+        <div class="clearfix mxn1">
+          <div class="sm-col sm-col-6 px1">
+            <div class="mb3 select required profile_state">
+              <label class="select required bold" for="profile_state"><abbr title="required" class="red display-none">*</abbr> State</label><select class="select required block col-12 field" required="required" aria-required="true" name="profile[state]" id="profile_state">
+              <option value="AL">
+                Alabama
+              </option>
+              <option value="AK">
+                Alaska
+              </option>
+              <option value="AS">
+                American Samoa
+              </option>
+              <option value="AZ">
+                Arizona
+              </option>
+              <option value="AR">
+                Arkansas
+              </option>
+              <option value="AA">
+                Armed Forces Americas
+              </option>
+              <option value="AE">
+                Armed Forces Others
+              </option>
+              <option value="AP">
+                Armed Forces Pacific
+              </option>
+              <option value="CA">
+                California
+              </option>
+              <option value="CO">
+                Colorado
+              </option>
+              <option value="CT">
+                Connecticut
+              </option>
+              <option value="DE">
+                Delaware
+              </option>
+              <option value="DC">
+                District of Columbia
+              </option>
+              <option value="FL">
+                Florida
+              </option>
+              <option value="GA">
+                Georgia
+              </option>
+              <option value="GU">
+                Guam
+              </option>
+              <option value="HI">
+                Hawaii
+              </option>
+              <option value="ID">
+                Idaho
+              </option>
+              <option value="IL">
+                Illinois
+              </option>
+              <option value="IN">
+                Indiana
+              </option>
+              <option value="IA">
+                Iowa
+              </option>
+              <option value="KS">
+                Kansas
+              </option>
+              <option value="KY">
+                Kentucky
+              </option>
+              <option value="LA">
+                Louisiana
+              </option>
+              <option value="ME">
+                Maine
+              </option>
+              <option value="MD">
+                Maryland
+              </option>
+              <option value="MA">
+                Massachusetts
+              </option>
+              <option value="MI">
+                Michigan
+              </option>
+              <option value="MN">
+                Minnesota
+              </option>
+              <option value="MS">
+                Mississippi
+              </option>
+              <option value="MO">
+                Missouri
+              </option>
+              <option value="MT">
+                Montana
+              </option>
+              <option value="NE">
+                Nebraska
+              </option>
+              <option value="NV">
+                Nevada
+              </option>
+              <option value="NH">
+                New Hampshire
+              </option>
+              <option value="NJ">
+                New Jersey
+              </option>
+              <option value="NM">
+                New Mexico
+              </option>
+              <option value="NY">
+                New York
+              </option>
+              <option value="NC">
+                North Carolina
+              </option>
+              <option value="ND">
+                North Dakota
+              </option>
+              <option value="MP">
+                Northern Mariana Islands
+              </option>
+              <option value="OH">
+                Ohio
+              </option>
+              <option value="OK">
+                Oklahoma
+              </option>
+              <option value="OR">
+                Oregon
+              </option>
+              <option value="PA">
+                Pennsylvania
+              </option>
+              <option value="PR">
+                Puerto Rico
+              </option>
+              <option value="RI">
+                Rhode Island
+              </option>
+              <option value="SC">
+                South Carolina
+              </option>
+              <option value="SD">
+                South Dakota
+              </option>
+              <option value="TN">
+                Tennessee
+              </option>
+              <option value="TX">
+                Texas
+              </option>
+              <option value="UM">
+                United States Minor Outlying Islands
+              </option>
+              <option value="UT">
+                Utah
+              </option>
+              <option value="VT">
+                Vermont
+              </option>
+              <option value="VI">
+                Virgin Islands
+              </option>
+              <option value="VA">
+                Virginia
+              </option>
+              <option value="WA">
+                Washington
+              </option>
+              <option value="WV">
+                West Virginia
+              </option>
+              <option value="WI">
+                Wisconsin
+              </option>
+              <option value="WY">
+                Wyoming
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="sm-col sm-col-4 px1">
+          <div class="mb3 string required profile_zipcode">
+            <label class="string required bold" for="profile_zipcode"><abbr title="required" class="red display-none">*</abbr> ZIP Code</label><input class="string required zipcode block col-12 field" required="required" aria-required="true" pattern="(\d{5}([\-]\d{4})?)" type="text" name="profile[zipcode]" id="profile_zipcode">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb4">
+      <div class="mt0 mb3 pb-tiny border-bottom border-teal">
+        Date of birth
+      </div>
+      <div class="mb3 string required profile_dob">
+        <label class="string required bold" for="profile_dob"><abbr title="required" class="red display-none">*</abbr> Date of birth</label><input class="string required dob block col-12 field" aria-describedby="dob-instructs" required="required" aria-required="true" pattern="(0[1-9]|1[012])/(0[1-9]|1[0-9]|2[0-9]|3[01])/[0-9]{4}" type="text" name="profile[dob]" id="profile_dob">
+      </div>
+      <div class="hide" id="dob-instructs">
+        Must be in mm/dd/yyyy format
+      </div>
+    </div>
+    <div class="mb4">
+      <div class="mt0 mb3 pb-tiny border-bottom border-teal">
+        Social Security Number<span class="hint--top hint--no-animate" aria-label="This is a placeholder tooltip." tabindex="0"><img width="16" class="px1 img-tooltip" src="http://localhost:3000/assets/tooltip-da539edfc1e731303db9b4af865a615166cf5e8ab211b0d51ee33beec9ab124f.svg" alt="Tooltip"></span>
+      </div>
+      <div class="mb3 string required profile_ssn">
+        <label class="string required bold" for="profile_ssn"><abbr title="required" class="red display-none">*</abbr> Social Security Number</label><input class="string required ssn block col-12 field" aria-labelledby="label-ssn" required="required" aria-required="true" pattern="^\d{3}-?\d{2}-?\d{4}$" type="text" name="profile[ssn]" id="profile_ssn">
+        <div>
+          <span class="mt1 h5 blue sans-serif underline hint--top" tabindex="0" aria-label="This is a placeholder tooltip.">Individual Tax Identification Number</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt5">
+      <button class="btn btn-primary btn-wide" type="submit">Continue</button>
+      <div class="mt1">
+        <a class="underline" href="{{ "/idv/cancel" | prepend: site.baseurl }}">Cancel verification</a>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>

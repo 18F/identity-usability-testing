@@ -7,20 +7,13 @@ logged_in: true
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
-    <div class="mxn2 sm-mxn6 sm-mtn3">
-      <div class="px2 py1 sm-px6 mb-40p h5 line-height-2 alert alert-success" role="alert">
-        <div class="alert-inner">
-          Your one-time passcode has been sent via text message.
-        </div>
-      </div>
-    </div>
     <h1 class="h3 my0">
       Enter the passcode we sent you
     </h1>
     <p class="mt-tiny mb0">
       Please enter the code sent to <strong>+1 (324) 234-2342</strong>.
     </p>
-    <form role="form" class="mt4" action="/phone_confirmation" accept-charset="UTF-8" method="post">
+    <form role="form" class="mt4" action="{{ "/settings/recovery-code" | prepend: site.baseurl }}" accept-charset="UTF-8">
       <label class="block bold" for="code">One-time passcode</label>
       <div class="col-12 sm-col-5 mb4 sm-mb0 sm-mr-20p inline-block">
         <input type="number" name="code" id="code" value="317990" required="required" class="col-12 field mfa">
@@ -28,13 +21,13 @@ logged_in: true
     </form>
     <div class="mt3 mb1">
       <p class="mb1">
-        <a href="/phone_confirmation/send?otp_method=voice">Call me with the code instead</a>
+        <a href="#">Call me with the code instead</a>
       </p>
       <p class="mb1">
-        Didn't receive a code? <a href="/phone_confirmation/send?otp_method=sms">Resend</a>
+        Didn't receive a code? <a href="#">Resend</a>
       </p>
       <p class="mb1">
-        Entered the wrong phone number? <a href="/phone_setup">Try again</a>
+        Entered the wrong phone number? <a href="{{ "/phone_setup" | prepend: site.baseurl }}">Try again</a>
       </p>
     </div>
   </div>

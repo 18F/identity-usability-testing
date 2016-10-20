@@ -2,6 +2,6 @@
 .jekyll-metadata
 .sass-cache
 Staticfile.auth
-
 node_modules
 _site
+_pages/partners

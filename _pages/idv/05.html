@@ -1,0 +1,71 @@
+---
+layout: default
+title: Review and submit
+permalink: /idv/review/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h2 class="heading">
+      Review and submit
+    </h2>
+    <p class="italic">
+      Please review your information and ensure it is correct.
+    </p>
+    <div class="mt4 mb3 p3 border rounded">
+      <a class="right btn btn-primary p0 w-60p h6 bg-light-blue blue regular center" href="{{ "/idv/session" | prepend: site.baseurl }}">Edit</a>
+      <div class="h6">
+        Full name
+      </div>
+      <div class="h4 bold">
+        test test
+      </div>
+      <div class="mt3 h6">
+        Mailing address
+      </div>
+      <div class="h4 bold">
+        test<br>
+        test<br>
+        test, AS 53453-4534
+      </div>
+      <div class="mt3 h6">
+        Date of birth
+      </div>
+      <div class="h4 bold">
+        May 31, 1999
+      </div>
+      <div class="mt3 h6">
+        Social Security Number (SSN)
+      </div>
+      <div class="h4 bold">
+        543-64-5645
+      </div>
+    </div>
+    <div class="mb3 p3 border rounded">
+      <a class="right btn btn-primary p0 w-60p h6 bg-light-blue blue regular center" href="{{ "/idv/finance" | prepend: site.baseurl }}">Edit</a>
+      <div class="h6">
+        Last 8 digits of a credit card
+      </div>
+      <div class="h4 bold">
+        gdfgdfgdfgdf
+      </div>
+    </div>
+    <div class="mb3 p3 border rounded">
+      <a class="right btn btn-primary p0 w-60p h6 bg-light-blue blue regular center" href="{{ "/idv/phone" | prepend: site.baseurl }}">Edit</a>
+      <div class="h6">
+        Phone number
+      </div>
+      <div class="h4 bold">
+        +1 (324) 234-2342
+      </div>
+    </div>
+    <form action="{{ "/idv/review" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <div class="mt3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+      <div class="mt1">
+        <a class="underline" href="{{ "/idv/cancel" | prepend: site.baseurl }}">Cancel verification</a>
+      </div>
+    </form>
+  </div>
+</div>
