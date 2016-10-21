@@ -9,19 +9,37 @@ import './misc/pw-strength';
 
 import './mockup/financial-form'
 
-// Swap in any query string values
-var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
-var queryString = location.search.substring(1); 
-var keyValues = queryString.split('&'); 
 
-for(var i in keyValues) { 
-  var key = keyValues[i].split('=');
-  if (key.length > 1) {
-    var k = decode(key[0]);
-    var v = decode(key[1]);
-    var el = document.getElementById(k);
-    if(el){
-      el.innerHTML = v;
-    }
+$(document).ready(function () {
+  if (sessionStorage) {
+    // Save form data to sessionStorage on submit
+    $('form').submit(function() {
+      var $inputs = $('.field', this);
+
+      $inputs.each(function(){
+        if (this.type !== 'password' && this.id !== 'code') {
+          sessionStorage[$(this).attr('id')] = $(this).val();
+          console.log('Saved ' + $(this).attr('id') + ' = ' + $(this).val());
+        }
+      });
+    });
+
+    // Retrieve matching data from sessionStorage on load
+    $.each(sessionStorage, function(key, value){
+      $('span#' + key).html(value);
+      $('input#' + key).not('.ignore').val(value);
+      console.log('Retrieved ' + key + ': ' + value);
+
+      if ((key.indexOf('financial') !== -1) && (value !== '')) {
+        $('input#' + key).addClass('active');
+        $('span#' + key + '_label').removeClass('hide');
+      }
+
+      if ((key === 'profile_address2') && (value === '')) {
+        $('span#' + key).addClass('hide');
+      }      
+    });
+  } else {
+    alert('Warning: HTML5 storage not available; data will not propagate between pages')
   }
-} 
+});

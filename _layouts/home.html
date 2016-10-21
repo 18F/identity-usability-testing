@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    {{ content }}
+    <h1 class="h3 my0">
+      Log in
+    </h1>
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt4 new_user" id="new_user" action="{{ "/users/two_factor_authentication/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <div class="mb3 email required user_email">
+        <label class="email required bold" for="user_email"><abbr title="required" class="red display-none">*</abbr> Email</label><input class="string email required block col-12 field ignore" required="required" aria-required="true" type="email" value="" name="user[email]" id="user_email">
+      </div>
+      <div class="mb3 password required user_password">
+        <label class="password required bold" for="user_password"><abbr title="required" class="red display-none">*</abbr> Password</label><input class="password required block col-12 field ignore" required="required" aria-required="true" type="password" name="user[password]" id="user_password">
+      </div><input type="submit" name="commit" value="Log in" class="btn btn-primary btn-wide">
+    </form>
+    <p class="my3">
+      By signing in, you agree to login.gov’s <a href="#">Security Consent &amp; Privacy Act Statement</a>
+    </p>
+    <div class="clearfix pt1 border-top">
+      <div class="sm-col-right">
+        <a class="underline" href="{{ "/users/password/new" | prepend: site.baseurl }}">Forgot password</a><span class="px1 silver">|</span><a class="underline" href="{{ "/start" | prepend: site.baseurl }}">Create account</a>
+      </div>
+    </div>
+  </div>
+</div>

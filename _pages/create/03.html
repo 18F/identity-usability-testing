@@ -2,6 +2,8 @@
 layout: default
 title: Check your email
 permalink: /users/
+email_indicator: true
+email_link: /email_new/
 ---
 
 <div class="container sm-pt4">
@@ -12,10 +14,10 @@ permalink: /users/
         Check your email
       </h1>
       <p class="mb2">
-        We sent an email to <strong><span id="user[email]">null@null.com</span></strong> with a link to confirm your email address. Please click on the link in your email to continue signing up.
+        We sent an email to <strong><span id="user_email"></span></strong> with a link to confirm your email address. Please click on the link in your email to continue signing up.
       </p>
       <p class="mb2">
-        Didn't receive an email? <a href=".">Resend</a>
+        Didn't receive an email? <a href="#">Resend</a>
       </p>
       <p class="mb2 h5 italic">
         You can close this browser window once you have verified your email address.

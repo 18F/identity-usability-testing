@@ -3,20 +3,47 @@ layout: default
 title: Table of contents
 permalink: /toc/
 toc: false
+toolbox: false
 ---
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
-    <h1 class="heading">
+    <h1 class="h2">
       Table of contents
     </h1>
+    <hr>
+    <h3>Login</h3>
     <ul>
+      <li><a href="{{ '/' | prepend: site.baseurl }}">Welcome</a></li>
       {% for page in site.pages %}
-        {% if page.toc != false %}
+        {% if page.path contains "login" and page.toc != false %}
           <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>
+    <h3>Account Creation</h3>
+    <ul>
+      {% for page in site.pages %}
+        {% if page.path contains "create" and page.toc != false %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <h3>IDV</h3>
+    <ul>
+      {% for page in site.pages %}
+        {% if page.path contains "idv" and page.toc != false %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <h3>Partners</h3>
+    <ul>
+      {% for page in site.pages %}
+        {% if page.path contains "partners" and page.toc != false %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>   
   </div>
 </div>
-

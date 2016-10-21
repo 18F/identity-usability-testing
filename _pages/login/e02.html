@@ -1,15 +1,15 @@
 ---
 layout: default
 title: Just in case
-permalink: /settings/recovery-code/
+permalink: /settings/recovery-code2/
 ---
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
     <div class="mxn2 sm-mxn6 sm-mtn3">
-      <div class="px2 py1 sm-px6 mb-40p h5 line-height-2 alert alert-success" role="alert">
+      <div class="px2 py1 sm-px6 mb-40p h5 line-height-2 alert alert-notice" role="alert">
         <div class="alert-inner">
-          Phone confirmation successful!
+          Two-factor authentication successful.
         </div>
       </div>
     </div>
@@ -20,11 +20,10 @@ permalink: /settings/recovery-code/
       Below is the recovery code that we have generated for you. You can use this code to access your account in case you lose access to your phone. Make sure to print and/or write down this code and keep it in a safe place.
     </p>
     <div class="mt4 mb4 py2 px3 inline-block fs-20p border border-dashed monospace">
-      84a47f6b20e69e2d
+      67918b8241cec532
     </div>
-    <form class="button_to" action="{{ "/idv/" | prepend: site.baseurl }}">
+    <form class="button_to" action="{{ "/success_login/" | prepend: site.baseurl }}">
       <input class="btn btn-primary btn-wide mb1" type="submit" value="Continue">
     </form>
   </div>
 </div>
-

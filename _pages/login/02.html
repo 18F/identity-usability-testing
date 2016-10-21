@@ -1,0 +1,31 @@
+---
+layout: default
+title: Enter the secure one-time passcode
+permalink: /login/two-factor/sms/
+sms_indicator: true
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h1 class="h3 my0">
+      Enter the passcode we sent you
+    </h1>
+    <p class="mt-tiny mb0" id="code-instructs">
+      Please enter the code sent to your phone.
+    </p>
+    <form role="form" class="mt3 sm-mt4" action="{{ "/success_login/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <label class="block bold" for="code"><abbr title="required" class="red display-none">*</abbr> One-time passcode</label>
+      <div class="col-12 sm-col-5 mb4 sm-mb0 sm-mr-20p inline-block">
+        <input type="text" name="code" id="code" required="required" autofocus="autofocus" pattern="[0-9]*" class="col-12 field monospace mfa" aria-describedby="code-instructs">
+      </div><input type="submit" name="commit" value="Submit" class="btn btn-primary align-top">
+    </form>
+    <div class="mt3 mb1">
+      <p class="mb1">
+        <a href="#">Call me with the code instead</a>
+      </p>
+      <p class="mb1">
+        Didn't receive a code? <a href="#">Send a new one</a>
+      </p>
+    </div>
+  </div>
+</div>

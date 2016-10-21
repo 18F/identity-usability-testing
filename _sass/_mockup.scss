@@ -1,3 +1,34 @@
+#toolbox {
+  width: 90px;
+
+  a {
+    border-color: $gray;
+    width: 100%;
+
+    &.hint--right {
+      cursor: default;
+    }
+
+    &:hover {
+      background-color: #222;
+      text-decoration: none;
+    }
+
+    &::after {
+      font-size: $h3;
+      width: 150px;
+    }
+  }
+
+  .toolbox-indicator {
+    height: 20px;
+    line-height: 20px;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+  }
+}
+
 [class*="floating-container"] {
   input {
     color: transparent;

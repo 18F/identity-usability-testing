@@ -1,0 +1,19 @@
+{% if page.toolbox != false %}
+  <div id="toolbox" class="absolute bg-black center top-0 left-0 sm-show">
+    <h5 class="silver caps sans-serif py2">Toolbox</h5>
+    <a class="block silver py2 border-top border-bottom h5 relative" href="{% if page.email_indicator == true %}{{ page.email_link | prepend: site.baseurl }}{% else %}#{% endif %}"{% if page.email_indicator != true %} onclick="alert('No new emails!');"{% endif %}>
+      {% if page.email_indicator == true %}
+        <div class="bg-red circle center overflow-hidden toolbox-indicator absolute bold h6">1</div>
+      {% endif %}
+      <i class="block fa fa-envelope-o" aria-hidden="true" style="font-size:24px;"></i>
+      <span class="block">Email</span>
+    </a>
+    <a class="block silver py2 border-bottom h5 relative{% if page.sms_indicator == true %} hint--right hint--always hint--rounded hint--info{% endif %}" href="#" aria-label="577123 is your login.gov one-time passcode."{% if page.sms_indicator != true %} onclick="alert('No new text messages!');"{% endif %}>
+      {% if page.sms_indicator == true %}
+        <div class="bg-red circle center overflow-hidden toolbox-indicator absolute bold h6">1</div>
+      {% endif %}
+      <i class="block fa fa-mobile" aria-hidden="true" style="font-size:36px;"></i>
+      <span class="block">Cellphone</span>
+    </a>
+  </div>
+{% endif %}

@@ -26,17 +26,17 @@ permalink: /idv/phone/
     <p>
       This phone number can be the same one you used to set up your one-time password as long as it meets the criteria above.
     </p>
-    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt4 new_idv_phone_form" id="new_idv_phone_form" action="{{ "/idv/review" | prepend: site.baseurl }}" accept-charset="UTF-8">
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt4 new_idv_phone_form" id="new_idv_phone_form" action="{{ "/idv/review/" | prepend: site.baseurl }}" accept-charset="UTF-8">
       <div class="mt4 mb3">
         <div class="mb3 tel required idv_phone_form_phone">
-          <label class="tel required bold" for="idv_phone_form_phone"><abbr title="required" class="red display-none">*</abbr> Phone</label><input class="string tel required block col-12 field" required="required" aria-required="true" type="tel" value="+1 (324) 234-2342" name="idv_phone_form[phone]" id="idv_phone_form_phone">
+          <label class="tel required bold" for="idv_phone_form_phone"><abbr title="required" class="red display-none">*</abbr> Phone</label><input class="string tel required block col-12 field" required="required" aria-required="true" type="tel" name="idv_phone_form[phone]" id="two_factor_setup_form_phone">
         </div>
       </div>
       <div class="mt3">
         <input type="submit" name="commit" value="Continue" class="btn btn-primary btn btn-primary btn-wide">
       </div>
       <div class="mt1">
-        <a class="underline" href="{{ "/idv/cancel" | prepend: site.baseurl }}">Cancel verification</a>
+        <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">Cancel verification</a>
       </div>
       </form>
     </div>

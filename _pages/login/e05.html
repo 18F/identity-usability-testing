@@ -1,0 +1,37 @@
+---
+layout: default
+title: Change the password for your account
+permalink: /users/password/edit/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h1 class="h3 my0">
+      Change your password
+    </h1>
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt4 new_password_form" id="new_password_form" action="{{ "/reset_success/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <div class="pb3 relative hidden password_form_reset_password_token">
+        <input class="hidden block col-12 field" type="hidden" value="5yq5nxWBhYMgNQyx997M" name="password_form[reset_password_token]" id="password_form_reset_password_token">
+      </div>
+      <div class="pb3 relative password required password_form_password">
+        <label class="password required bold" for="password_form_password"><abbr title="required" class="red display-none">*</abbr> New password</label><input class="password required block col-12 field" required="required" aria-required="true" type="password" name="password_form[password]" id="password_form_password">
+      </div>
+      <div aria-atomic="true" aria-live="polite" class="hide" id="pw-strength-cntnr">
+        <div class="mb3">
+          <div class="clearfix mxn-tiny pt-tiny">
+            <div class="pw-bar"></div>
+            <div class="pw-bar"></div>
+            <div class="pw-bar"></div>
+            <div class="pw-bar"></div>
+          </div>
+          <div class="h5">
+            <span class="h6">Password strength:</span> <span class="bold" id="pw-strength-txt">...</span>
+          </div>
+          <div class="h6">
+            <div class="italic" id="pw-strength-feedback"></div>
+          </div>
+        </div>
+      </div><input type="submit" name="commit" value="Change my password" class="btn btn-primary">
+    </form>
+  </div>
+</div>

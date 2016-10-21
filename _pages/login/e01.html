@@ -1,0 +1,21 @@
+---
+layout: default
+title: Enter the recovery code
+permalink: /login/two-factor/recovery-code/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h1 class="h3 my0">
+      Enter a recovery code
+    </h1>
+    <p class="mt-tiny mb0">
+      Please enter your recovery code. Once used, a new one will be generated for you.
+    </p>
+    <form role="form" class="mt3 sm-mt4" action="{{ "/settings/recovery-code2/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <div class="mb2">
+        <label class="block bold" for="code"><abbr title="required" class="red display-none">*</abbr> Recovery code</label><input type="text" name="code" id="code" value="" required="required" class="block col-12 field">
+      </div><input type="submit" name="commit" value="Submit" class="btn btn-primary mt2">
+    </form>
+  </div>
+</div>

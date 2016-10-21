@@ -19,9 +19,10 @@ permalink: /users/confirmation/
     <p class="mt-tiny mb0" id="password-description">
       Your new password must be at least 8 characters.
     </p>
-    <form role="form" autocomplete="off" class="simple_form mt4 new_password_form" id="new_password_form" action="{{ "/phone_setup" | prepend: site.baseurl }}" accept-charset="UTF-8" method="get">
+    <form role="form" autocomplete="off" class="simple_form mt4 new_password_form" id="new_password_form" action="{{ "/phone_setup/" | prepend: site.baseurl }}" accept-charset="UTF-8" method="get">
       <div class="mb2 password required password_form_password">
-        <label class="password required bold" for="password_form_password"><abbr title="required" class="red display-none">*</abbr> Password</label><input aria-describedby="password-description" class="password required block col-12 field" required="required" aria-required="true" type="password" name="password_form[password]" id="password_form_password">
+        <label class="password required bold" for="password_form_password"><abbr title="required" class="red display-none">*</abbr> Password</label>
+        <input aria-describedby="password-description" class="password required block col-12 field" required="required" aria-required="true" type="password" name="password_form[password]" id="password_form_password">
       </div>
       <div aria-atomic="true" aria-live="polite" class="hide" id="pw-strength-cntnr">
         <div class="mb3">
@@ -39,7 +40,6 @@ permalink: /users/confirmation/
           </div>
         </div>
       </div>
-      <input type="hidden" name="confirmation_token" id="confirmation_token" value="K75tEa39jYfkzwugSzSU">
       <input type="submit" name="commit" value="Submit" class="btn btn-primary btn-wide mt2 mb1">
       </form>
     </div>

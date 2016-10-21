@@ -12,7 +12,7 @@ permalink: /users/sign_up/
     <p class="mt-tiny mb0" id="email-description">
       Enter the email address you’d like to associate with login.gov
     </p>
-    <form autocomplete="off" role="form" class="simple_form mt4 new_user" id="new_user" action="{{ "/users" | prepend: site.baseurl }}" accept-charset="UTF-8" method="get">
+    <form autocomplete="off" role="form" class="simple_form mt4 new_user" id="new_user" action="{{ "/users/" | prepend: site.baseurl }}" accept-charset="UTF-8" method="get">
       <div class="mb3 email required user_email">
         <label class="email required bold" for="user_email"><abbr title="required" class="red display-none">*</abbr> Email</label><input aria-describedby="email-description" class="string email required block col-12 field" required="required" aria-required="true" type="email" value="" name="user[email]" id="user_email">
       </div><input type="submit" name="commit" value="Sign up" class="btn btn-primary btn-wide mt2 mb1">

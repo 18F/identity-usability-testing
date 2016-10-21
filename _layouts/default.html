@@ -3,15 +3,19 @@
   {% include head.html %}
   <body class="site sm-bg-light-blue">
     <div class="site-wrap">
+      {% include toolbox.html %}
       <div class="py1 bg-navy white fs-12p line-height-1 center">
-        <img alt="US flag" class="mr1 align-bottom" src="{{ "/images/us-flag.png" | prepend: site.baseurl }}"  width="18" height="12">An official website of the United States government
+        <img alt="US flag" class="mr1 align-bottom" src="{{ "/images/us-flag.png" | prepend: site.baseurl }}" width="18" height="12">An official website of the United States government
       </div>
       {% include nav.html %}
       {{ content }}
     </div>
     {% include footer.html %}
-    {% for js in page.js %}
-      <script src="{{site.baseurl}}/js/{{ js }}"></script>
-    {% endfor %}
+    {% if page.clear_storage == true %}
+      <script>
+        sessionStorage.clear();
+        console.log('SessionStorage cleared.');
+      </script>
+    {% endif %}
   </body>
 </html>
