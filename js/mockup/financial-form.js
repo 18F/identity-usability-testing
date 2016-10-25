@@ -3,7 +3,7 @@ import { TextField } from 'field-kit';
 
 const fields = document.querySelectorAll("[class*='floating-container'] input");
 
-if (fields) {
+if (fields.length !== 0) {
   fields.forEach(function(f) {
     const field = new TextField(f);
 

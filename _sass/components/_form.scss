@@ -38,7 +38,7 @@ textarea {
 .invalid,
 .interacted.required,
 .has-error input {
-  background-image: url(image-path('alert/ico-exclamation.svg'));
+  background-image: url('/images/alert/ico-exclamation.svg');
   background-position: center right $form-field-padding-x;
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
