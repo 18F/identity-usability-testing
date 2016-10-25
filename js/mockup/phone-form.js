@@ -4,8 +4,6 @@ $(document).ready(function () {
   $('#two_factor_setup_form_phone').keyup(function() {
     var value = this.value;
     var phone = new RegExp('^(\\+?0?1\\s)?\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}$');
-    
-
 
     if (phone.test(value)) {
       $('#js-phone2fa-questions').slideDown('slow');
