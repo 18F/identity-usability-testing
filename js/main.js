@@ -8,6 +8,7 @@ import './app/idv-finance-helper';
 import './misc/pw-strength';
 
 import './mockup/financial-form'
+import './mockup/phone-form'
 
 
 $(document).ready(function () {
