@@ -2,10 +2,12 @@
 layout: default
 title: Phone number of record
 permalink: /idv/phone/
+progress: 6
 ---
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    {% include progress.html %}
     <h2 class="h3 mt0">
       Finally, your phone of record
     </h2>
@@ -19,7 +21,7 @@ permalink: /idv/phone/
           <div class="ml1 inline-block italic">Mobile or landline okay</div>
           <input class="string tel required block col-12 field" required="required" aria-required="true" type="tel" name="idv_phone_form[phone]" id="two_factor_setup_form_phone">
         </div>
-        <div id="js-phone2fa-questions" style="display:none;">
+        <div id="js-phone2fa-questions">
           <div class="mb2 pt1 pb3 border-top border-bottom border-teal">
             <div class="mb1 fs-20p">Is this phone number <strong>in your name, or a family member's name</strong>?</div>
             <div id="phone2fa-question-1-fail" class="col-12 border-box mb1 alert-error p2 rounded border border-red" style="display:none;">We recommend using a phone in your name as your phone of record to verify your identity.</div>
