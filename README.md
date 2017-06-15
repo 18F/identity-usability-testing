@@ -1,6 +1,4 @@
-### Identity usability testing
-
-**Work in progress!!!**
+### Identity usability testing [DEPRECATED]
 
 #### Dependencies
 
