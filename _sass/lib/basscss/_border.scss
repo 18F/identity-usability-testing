@@ -41,6 +41,8 @@
 
 .rounded { border-radius: $border-radius }
 
+.rounded-xl { border-radius: $border-radius * 4 }
+
 .circle  { border-radius: 50% }
 
 .rounded-top    { border-radius: $border-radius $border-radius 0 0 }
