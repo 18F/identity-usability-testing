@@ -2,6 +2,20 @@
   .btn { font-size: $button-font-size-sm; }
 }
 
+.btn-border {
+  border-color: #cedced;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  border-radius: 8px;
+}
+
 .btn-wide {
   box-sizing: border-box;
   min-width: 220px;
