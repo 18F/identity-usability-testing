@@ -7,26 +7,32 @@ progress: 3
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
-    {% include progress.html %}
-    <div class="mxn2 sm-mxn6">
-      <div class="px2 py1 sm-px6 mb-40p h5 line-height-2 alert alert-success" role="alert">
-        <div class="alert-inner">
-          Phone confirmation successful!
-        </div>
-      </div>
-    </div>
     <h1 class="h3 my0">
-      Your recovery code
+      Store your personal key
     </h1>
     <p class="mt-tiny mb0">
-      Below is the recovery code that we have generated for you. You can use this code to access your account in case you lose access to your phone. Make sure to print and/or write down this code and keep it in a safe place.
+      This is the only way to regain access to your account if you lose the phone where we send your security code. <strong>Write it down or print it out.</strong>
     </p>
-    <div class="mt4 mb4 py2 px3 inline-block fs-20p border border-dashed monospace">
-      84a47f6b20e69e2d
+    <div class="col-12 border-box mt3 mb3 py2 px2 sm-px4 fs-20p sans-serif border border-dashed border-red rounded-xl relative clearfix" id="personal-key">
+      <img width="24" class="absolute ico-scissors" src="http://localhost:3000/assets/scissors-0c0d222b679337c36717c9b8b5507c83fe9f582beaf83887fb836b99bc3ceb54.svg" alt="Scissors">
+      <p class="bold center mt1">
+        <img width="36" class="align-middle mr1" src="http://localhost:3000/assets/p-key-9cc471ceab9a684010a778ef1e55739b03d17597c4d7617d9750c50cf3bdfecb.svg" alt="P key">
+        Your personal key
+      </p>
+      <div class="my4 px0 sm-px1 py2 center border-box border border-teal bw2 rounded-md separator-text">
+        <div class="inline h3 bold navy monospace" data-personal-key="word">FPNZ</div>
+        <div class="inline h3 bold navy monospace" data-personal-key="word">EEHG</div>
+        <div class="inline h3 bold navy monospace" data-personal-key="word">38GM</div>
+        <div class="inline h3 bold navy monospace" data-personal-key="word">TDFF</div>
+      </div>
+      <div class="left h5 mt2">
+        Generated on <strong>April 19, 2018</strong>
+      </div>
+      <div class="right mt1"><img width="96" class="align-middle mt-tiny" src="http://localhost:3000/assets/logo-daea47bfc25e493f9fe02f6146c724752b0614f67c6807130102acb03fb107b7.svg" alt="Logo">
+      </div>
     </div>
     <form class="button_to" action="{{ "/idv/" | prepend: site.baseurl }}">
       <input class="btn btn-primary btn-wide mb1" type="submit" value="Continue">
     </form>
   </div>
 </div>
-

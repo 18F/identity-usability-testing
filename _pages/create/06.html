@@ -8,29 +8,29 @@ progress: 3
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
-    {% include progress.html %}
     <h1 class="h3 my0">
-      Enter the passcode we sent you
+      Enter your security code.
     </h1>
     <p class="mt-tiny mb0">
-      Please enter the code sent to <strong><span id="two_factor_setup_form_phone"></span></strong>.
+      We sent a security code to <strong><span id="two_factor_setup_form_phone"></span></strong>. This code will expire in 10 minutes.
     </p>
-    <form role="form" class="mt4" action="{{ "/settings/recovery-code/" | prepend: site.baseurl }}" accept-charset="UTF-8">
-      <label class="block bold" for="code">One-time passcode</label>
+    <form role="form" class="mt3" action="{{ "/settings/recovery-code/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <label class="block bold" for="code">One-time security code</label>
       <div class="col-12 sm-col-5 mb4 sm-mb0 sm-mr-20p inline-block">
         <input type="text" name="code" id="code" required="required" autofocus="autofocus" pattern="[0-9]*" class="col-12 field monospace mfa" autocapitalize="off">
       </div><input type="submit" name="commit" value="Submit" class="btn btn-primary align-top">
     </form>
     <div class="mt3 mb1">
-      <p class="mb1">
-        <a href="#">Call me with the code instead</a>
+      <p class="mb2">
+        Need another code? <a href="#">Get another text message.</a> Message rates may apply.
       </p>
-      <p class="mb1">
-        Didn't receive a code? <a href="#">Resend</a>
+      <p class="mb2">
+        If you can't get text messages right now, you can <a href="#">get a security code via phone call.</a>
       </p>
-      <p class="mb1">
-        Entered the wrong phone number? <a href="{{ "/phone_setup/" | prepend: site.baseurl }}">Try again</a>
+      <p class="mb2">
+        Entered the wrong phone number? <a href="{{ "/phone_setup/" | prepend: site.baseurl }}">Use another phone number.</a>
       </p>
     </div>
+    {% include cancel.html %}
   </div>
 </div>

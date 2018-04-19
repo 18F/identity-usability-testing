@@ -15,10 +15,10 @@ progress: 2
       </div>
     </div>
     <h1 class="h3 my0">
-      Create a password
+      Create a strong password
     </h1>
-    <p class="mt-tiny mb0" id="password-description">
-      Your new password must be at least 8 characters.
+    <p class="mt2 mb0" id="password-description">
+      It must be at least 9 characters long and not be a commonly used password. That's it!
     </p>
     <form role="form" autocomplete="off" class="simple_form mt4 new_password_form" id="new_password_form" action="{{ "/phone_setup/" | prepend: site.baseurl }}" accept-charset="UTF-8" method="get">
       <div class="mb2 password required password_form_password">
@@ -41,7 +41,8 @@ progress: 2
           </div>
         </div>
       </div>
-      <input type="submit" name="commit" value="Submit" class="btn btn-primary btn-wide mt2 mb1">
+      <input type="submit" name="commit" value="Continue" class="btn btn-primary btn-wide mt2 mb1">
       </form>
+      {% include cancel.html %}
     </div>
   </div>
