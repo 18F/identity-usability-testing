@@ -7,71 +7,209 @@ progress: 4
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <img alt="images" class="mb3" width="200" src="{{ "/images/ID-none@3x.png" | prepend: site.baseurl }}">
     <h1 class="h3 my0">
-      Next, help us identify you
+      To verify your identity, you’ll need information from your state-issued ID
     </h1>
     <div class="mb-40p">
       <div class="mb-40p">
-        To complete registration with login.gov, we’ll ask you about the following:
-      </div>
-      <h2 class="mb1 pb-tiny h5 border-bottom border-teal">
-        Basic information
-      </h2>
-      <div class="mb-12p h6">
-        We’ll start with basic information, like:
-      </div>
-      <ul class="mb0 teal-dots">
-        <li class="mb1">Full name
-        </li>
-        <li class="mb1">Date of birth
-        </li>
-        <li class="mb1">Mailing address
-        </li>
-        <li class="mb1">Social Security Number or Individual Tax Identification Number
-        </li>
-      </ul>
-    </div>
-    <div class="mb-40p">
-      <h2 class="mt0 mb1 pb-tiny h5 border-bottom border-teal">
-        Financial information
-      </h2>
-      <div class="mb-12p h6">
-        Additionally, we need a number from only one of your financial accounts. We can use any of the following:
-      </div>
-      <ul class="mb-12p teal-dots">
-        <li class="mb1">Last 8 digits of a credit card
-        </li>
-        <li class="mb1">Auto loan account number
-        </li>
-        <li class="mb1">Mortgage loan account number
-        </li>
-        <li class="mb1">Home equity line of credit account number
-        </li>
-      </ul>
-      <div class="h6 italic">
-        You will never be charged any money, and are not sharing any account balances, or other financial information with us.
+        Where was your driver’s license, driver’s permit, or state ID issued?
       </div>
     </div>
-    <div class="mb-40p">
-      <h2 class="mt0 mb1 pb-tiny h5 border-bottom border-teal">
-        Official phone number
-      </h2>
-      <div class="mb-12p h6">
-        Finally, we need your official phone number, which can be:
-      </div>
-      <ul class="mb0 teal-dots">
-        <li class="mb1">Lorem ipsum dolor set
-        </li>
-        <li class="mb1">Lorem ipsum dolor
-        </li>
-      </ul>
+    <div class="mb-40p sm-col-6">
+      <div class="mb3 select required profile_state">
+        <label class="select required bold" for="profile_state"><abbr title="required" class="red display-none">*</abbr> State</label><select class="select required block col-12 field" required="required" aria-required="true" name="profile[state]" id="profile_state">
+          <option value="">
+            - Select -
+          </option>
+        <option value="AL">
+          Alabama
+        </option>
+        <option value="AK">
+          Alaska
+        </option>
+        <option value="AS">
+          American Samoa
+        </option>
+        <option value="AZ">
+          Arizona
+        </option>
+        <option value="AR">
+          Arkansas
+        </option>
+        <option value="AA">
+          Armed Forces Americas
+        </option>
+        <option value="AE">
+          Armed Forces Others
+        </option>
+        <option value="AP">
+          Armed Forces Pacific
+        </option>
+        <option value="CA">
+          California
+        </option>
+        <option value="CO">
+          Colorado
+        </option>
+        <option value="CT">
+          Connecticut
+        </option>
+        <option value="DE">
+          Delaware
+        </option>
+        <option value="DC">
+          District of Columbia
+        </option>
+        <option value="FL">
+          Florida
+        </option>
+        <option value="GA">
+          Georgia
+        </option>
+        <option value="GU">
+          Guam
+        </option>
+        <option value="HI">
+          Hawaii
+        </option>
+        <option value="ID">
+          Idaho
+        </option>
+        <option value="IL">
+          Illinois
+        </option>
+        <option value="IN">
+          Indiana
+        </option>
+        <option value="IA">
+          Iowa
+        </option>
+        <option value="KS">
+          Kansas
+        </option>
+        <option value="KY">
+          Kentucky
+        </option>
+        <option value="LA">
+          Louisiana
+        </option>
+        <option value="ME">
+          Maine
+        </option>
+        <option value="MD">
+          Maryland
+        </option>
+        <option value="MA">
+          Massachusetts
+        </option>
+        <option value="MI">
+          Michigan
+        </option>
+        <option value="MN">
+          Minnesota
+        </option>
+        <option value="MS">
+          Mississippi
+        </option>
+        <option value="MO">
+          Missouri
+        </option>
+        <option value="MT">
+          Montana
+        </option>
+        <option value="NE">
+          Nebraska
+        </option>
+        <option value="NV">
+          Nevada
+        </option>
+        <option value="NH">
+          New Hampshire
+        </option>
+        <option value="NJ">
+          New Jersey
+        </option>
+        <option value="NM">
+          New Mexico
+        </option>
+        <option value="NY">
+          New York
+        </option>
+        <option value="NC">
+          North Carolina
+        </option>
+        <option value="ND">
+          North Dakota
+        </option>
+        <option value="MP">
+          Northern Mariana Islands
+        </option>
+        <option value="OH">
+          Ohio
+        </option>
+        <option value="OK">
+          Oklahoma
+        </option>
+        <option value="OR">
+          Oregon
+        </option>
+        <option value="PA">
+          Pennsylvania
+        </option>
+        <option value="PR">
+          Puerto Rico
+        </option>
+        <option value="RI">
+          Rhode Island
+        </option>
+        <option value="SC">
+          South Carolina
+        </option>
+        <option value="SD">
+          South Dakota
+        </option>
+        <option value="TN">
+          Tennessee
+        </option>
+        <option value="TX">
+          Texas
+        </option>
+        <option value="UM">
+          United States Minor Outlying Islands
+        </option>
+        <option value="UT">
+          Utah
+        </option>
+        <option value="VT">
+          Vermont
+        </option>
+        <option value="VI">
+          Virgin Islands
+        </option>
+        <option value="VA">
+          Virginia
+        </option>
+        <option value="WA">
+          Washington
+        </option>
+        <option value="WV">
+          West Virginia
+        </option>
+        <option value="WI">
+          Wisconsin
+        </option>
+        <option value="WY">
+          Wyoming
+        </option>
+      </select>
+    </div>
+
     </div>
     <p class="mb3">
       We have partnered with a trusted third party company to verify this information and your identity.
     </p>
-    <p class="mb3 bold">
-      Do you have all of this information available?
-    </p><a class="btn btn-primary btn-wide" href="{{ "/idv/session/" | prepend: site.baseurl }}">Yes</a>
+<a class="btn btn-primary btn-wide" href="{{ "/idv/session/" | prepend: site.baseurl }}">Continue</a>
     <div class="mt1">
       <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">Cancel verification</a>
     </div>
