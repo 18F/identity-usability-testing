@@ -7,38 +7,54 @@ progress: 4
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
-    {% include progress.html %}
-    <h2 class="h3 my0 pb0">
-      First, tell us about yourself
-    </h2>
+    <!-- {% include progress.html %} -->
+    <h1 class="h3 my0 pb0">
+      Information about you
+    </h1>
     <form autocomplete="off" role="form" class="simple_form mt3 sm-mt4 new_profile" id="new_profile" action="{{ "/idv/finance/" | prepend: site.baseurl }}" accept-charset="UTF-8">
-      <div class="mb5">
-        <div class="mb3 pb-tiny border-bottom border-teal">
-          Full name
-        </div>
-        <div class="mb3 string required profile_first_name">
+      <div class="mb3">
+        <div class="mb1 string required profile_first_name">
           <label class="string required bold" for="profile_first_name"><abbr title="required" class="red display-none">*</abbr> First name</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[first_name]" id="profile_first_name">
         </div>
-        <div class="mb3 string required profile_last_name">
+        <div class="mb1 string required profile_last_name">
           <label class="string required bold" for="profile_last_name"><abbr title="required" class="red display-none">*</abbr> Last name</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[last_name]" id="profile_last_name">
         </div>
       </div>
+      <div class="mb1">
+        <div class="mb1 string required profile_dob">
+          <label class="string required bold" for="profile_dob"><abbr title="required" class="red display-none">*</abbr> Date of birth</label><input class="string required dob block sm-col-6 field" aria-describedby="dob-instructs" required="required" aria-required="true" pattern="(0[1-9]|1[012])/(0[1-9]|1[0-9]|2[0-9]|3[01])/[0-9]{4}" type="text" name="profile[dob]" id="profile_dob">
+        </div>
+        <div class="hide" id="dob-instructs">
+          Must be in mm/dd/yyyy format
+        </div>
+      </div>
       <div class="mb4">
-        <div class="mb3 pb-tiny border-bottom border-teal">
-          Mailing address
+
+        <div class="mb3 string required profile_ssn">
+          <label class="string required bold" for="profile_ssn"><abbr title="required" class="red display-none">*</abbr> Social Security Number</label><input class="string required ssn block sm-col-6 field" aria-labelledby="label-ssn" required="required" aria-required="true" pattern="^\d{3}-?\d{2}-?\d{4}$" type="text" name="profile[ssn]" id="profile_ssn">
         </div>
-        <div class="mb3 string required profile_address1">
-          <label class="string required bold" for="profile_address1"><abbr title="required" class="red display-none">*</abbr> Street address 1</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[address1]" id="profile_address1">
+      </div>
+      <h1 class="h3 my0 pb0">
+        ID information
+      </h1>
+      <p class="mb3">as it appears on your state-issued ID</p>
+      <div class="mb4">
+        <div class="mb1 string required profile_address1">
+          <label class="string required bold" for="profile_address1"><abbr title="required" class="red display-none">*</abbr>Driver’s license, permit or state ID number</label><input class="string required block sm-col-8 field" required="required" aria-required="true" type="text" name="profile[address1]" id="profile_address1">
         </div>
-        <div class="mb3 string optional profile_address2">
-          <label class="string optional bold" for="profile_address2">Street address 2 (optional)</label><input class="string optional block col-12 field" type="text" name="profile[address2]" id="profile_address2">
+
+        <div class="mb1 string required profile_address1">
+          <label class="string required bold" for="profile_address1"><abbr title="required" class="red display-none">*</abbr>Address </label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[address1]" id="profile_address1">
         </div>
-        <div class="mb3 string required profile_city">
+        <div class="mb1 string optional profile_address2">
+          <label class="string optional" for="profile_address2"> <span class="bold">Address</span> <span class="italic"> (optional) </span> </label><input class="string optional block col-12 field" type="text" name="profile[address2]" id="profile_address2">
+        </div>
+        <div class="mb1 string required profile_city">
           <label class="string required bold" for="profile_city"><abbr title="required" class="red display-none">*</abbr> City</label><input class="string required block col-12 field" required="required" aria-required="true" type="text" name="profile[city]" id="profile_city">
         </div>
         <div class="clearfix mxn1">
           <div class="sm-col sm-col-6 px1">
-            <div class="mb3 select required profile_state">
+            <div class="mb1 select required profile_state">
               <label class="select required bold" for="profile_state"><abbr title="required" class="red display-none">*</abbr> State</label><select class="select required block col-12 field" required="required" aria-required="true" name="profile[state]" id="profile_state">
               <option value="AL">
                 Alabama
@@ -230,29 +246,7 @@ progress: 4
         </div>
       </div>
     </div>
-    <div class="mb4">
-      <div class="mt0 mb3 pb-tiny border-bottom border-teal">
-        Date of birth
-      </div>
-      <div class="mb3 string required profile_dob">
-        <label class="string required bold" for="profile_dob"><abbr title="required" class="red display-none">*</abbr> Date of birth</label><input class="string required dob block col-12 field" aria-describedby="dob-instructs" required="required" aria-required="true" pattern="(0[1-9]|1[012])/(0[1-9]|1[0-9]|2[0-9]|3[01])/[0-9]{4}" type="text" name="profile[dob]" id="profile_dob">
-      </div>
-      <div class="hide" id="dob-instructs">
-        Must be in mm/dd/yyyy format
-      </div>
-    </div>
-    <div class="mb4">
-      <div class="mt0 mb3 pb-tiny border-bottom border-teal">
-        Social Security Number<span class="hint--top hint--no-animate" aria-label="This is a placeholder tooltip." tabindex="0"><img width="16" class="px1 img-tooltip" src="http://localhost:3000/assets/tooltip-da539edfc1e731303db9b4af865a615166cf5e8ab211b0d51ee33beec9ab124f.svg" alt="Tooltip"></span>
-      </div>
-      <div class="mb3 string required profile_ssn">
-        <label class="string required bold" for="profile_ssn"><abbr title="required" class="red display-none">*</abbr> Social Security Number</label><input class="string required ssn block col-12 field" aria-labelledby="label-ssn" required="required" aria-required="true" pattern="^\d{3}-?\d{2}-?\d{4}$" type="text" name="profile[ssn]" id="profile_ssn">
-        <div>
-          <span class="mt1 h5 blue sans-serif underline hint--top" tabindex="0" aria-label="This is a placeholder tooltip.">Individual Tax Identification Number</span>
-        </div>
-      </div>
-    </div>
-    <div class="mt5">
+    <div>
       <button class="btn btn-primary btn-wide" type="submit">Continue</button>
       <div class="mt1">
         <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">Cancel verification</a>
