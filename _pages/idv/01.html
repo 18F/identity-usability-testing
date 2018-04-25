@@ -7,15 +7,11 @@ progress: 4
 
 <div class="container sm-pt4">
   <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
-    <img alt="images" class="mb3" width="200" src="{{ "/images/ID-none@3x.png" | prepend: site.baseurl }}">
-    <h1 class="h3 my0">
-      To verify your identity, you’ll need information from your state-issued ID
+    <img alt="images" class="mb2" width="200" src="{{ "/images/ID-none@3x.png" | prepend: site.baseurl }}">
+    <h1 class="h3 mt2">
+      To verify your identity, we’ll need information from your state-issued ID
     </h1>
-    <div class="mb-40p">
-      <div class="mb-40p">
-        Where was your driver’s license, driver’s permit, or state ID issued?
-      </div>
-    </div>
+        <p class="mb1 mt4">Where was your driver’s license, driver’s permit, or state ID issued?</p>
     <div class="mb-40p sm-col-6">
       <div class="mb3 select required profile_state">
         <label class="select required bold" for="profile_state"><abbr title="required" class="red display-none">*</abbr> State</label><select class="select required block col-12 field" required="required" aria-required="true" name="profile[state]" id="profile_state">
@@ -204,12 +200,11 @@ progress: 4
         </option>
       </select>
     </div>
+    <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">I don't have a state-issued ID</a>
 
     </div>
-    <p class="mb3">
-      We have partnered with a trusted third party company to verify this information and your identity.
-    </p>
-<a class="btn btn-primary btn-wide" href="{{ "/idv/session/" | prepend: site.baseurl }}">Continue</a>
+
+<a class="btn btn-primary btn-wide mt3" href="{{ "/idv/session/" | prepend: site.baseurl }}">Continue</a>
     <div class="mt1">
       <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">Cancel verification</a>
     </div>
