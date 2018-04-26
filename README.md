@@ -58,7 +58,7 @@ By default the site will run on `http://localhost:4000`
 After doing this, Jekyll will run in the background until you cancel it (by closing the terminal or hitting ctrl-C) so if you need to run additional commands (like `git` commands) it may be a good idea to open up a second terminal window. 
 
 
-### Public domain
+### License
 
 This project is in the worldwide [public domain](LICENSE.md).   As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
