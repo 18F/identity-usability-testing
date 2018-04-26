@@ -1,0 +1,39 @@
+---
+layout: default
+title: Get started
+permalink: /address_phone_text/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <form autocomplete="off" role="form" class="simple_form new_profile" id="new_profile" action="{{ "/address_phone/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <h1 class="h3 mt2">
+        What phone number is associated with this address?
+      </h1>
+      <p class="mb2" id="2fa-description">
+        We'll send an address confirmation code via text message.
+      </p>
+      <div class="my2 py1 px2 h4 bold bg-light-green">
+        <span class="block">1600 Pennsylvania Ave NW</span>
+        <span class="block">Washington, DC 20500</span>
+      </div>
+      <div class="mt3 mb2 tel required two_factor_setup_form_phone">
+        <label class="tel required bold" for="two_factor_setup_form_phone">
+          <abbr title="required" class="red display-none">*</abbr>Phone Number
+        </label>
+        <input aria-describedby="2fa-description" class="string tel required block col-12 field" required="required" aria-required="true" type="tel" name="two_factor_setup_form[phone]" id="two_factor_setup_form_phone" autocapitalize="off">
+      </div>
+      <div class="my3 py2 pb1 px2 bg-yellow-light">
+        <span>This phone number <strong>must be</strong></span>
+        <ul class="px2 mb0 aligned-list">
+          <li>in your name, or a family member's name</li>
+          <li>not a virtual phone (such as Google Voice or Skype)</li>
+          <li>not a pre-paid phone number</li>
+          <li>be linked to the address on your state-issued ID</li>
+        </ul>
+      </div>
+      <button class="btn btn-primary btn-wide" type="submit">Continue</button>
+      {% include cancel-identity.html %}
+    </form>
+  </div>
+</div>
