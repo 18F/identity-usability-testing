@@ -40,7 +40,7 @@ progress: 4
       <p class="mb3">as it appears on your state-issued ID</p>
       <div class="mb4">
         <div class="mb1 string required profile_address1">
-          <label class="string required bold" for="profile_address1"><abbr title="required" class="red display-none">*</abbr>Driver’s license, permit or state ID number</label><input class="string required block sm-col-8 field" required="required" aria-required="true" type="text" name="profile[address1]" id="profile_address1">
+          <label class="string required bold" for="profile_address1"><abbr title="required" class="red display-none">*</abbr>Driver’s license, permit or state ID number</label><input class="string required block col-12 sm-col-8 field" required="required" aria-required="true" type="text" name="profile[address1]" id="profile_address1">
         </div>
 
         <div class="mb1 string required profile_address1">
@@ -246,7 +246,7 @@ progress: 4
         </div>
       </div>
     </div>
-    <div>
+    <div class="mt5">
       <button class="btn btn-primary btn-wide" type="submit">Continue</button>
       <div class="mt1">
         <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">Cancel verification</a>
