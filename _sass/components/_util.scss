@@ -4,6 +4,10 @@
 
 .bg-light-blue { background-color: $blue-light; }
 
+.bg-light-green { background-color: $green-light; }
+
+.bg-yellow-light { background-color: $yellow-light; }
+
 .no-hover-decoration:hover { text-decoration: none; }
 
 @media #{$breakpoint-sm} {

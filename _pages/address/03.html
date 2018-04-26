@@ -1,0 +1,30 @@
+---
+layout: default
+title: Get started
+permalink: /address_phone_confirm/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <form autocomplete="off" role="form" class="simple_form new_profile" id="new_profile" action="{{ "/address_confirmed/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <img alt="images" class="mb2" width="200" src="{{ "/images/enter-code@3x.png" | prepend: site.baseurl }}">
+      <h1 class="h3 mt2 mb3">
+        Enter the address confirmation code we sent
+      </h1>
+      <label class="block bold" for="code">Address confirmation code</label>
+      <div class="col-12 sm-col-8 mb4 sm-mb1 sm-mr-20p inline-block">
+        <input type="text" name="code" id="code" required="required" autofocus="autofocus" pattern="[0-9]*" class="col-12 field monospace mfa" autocapitalize="off">
+      </div>
+      <div class="mt1 mb4">
+        <p class="mb1">
+          <a href="#">Send another code</a>
+        </p>
+        <p class="mb1">
+          <a href="#">Use a different phone number</a>
+        </p>
+      </div>
+      <button class="btn btn-primary btn-wide" type="submit">Continue</button>
+      {% include cancel.html %}
+    </form>
+  </div>
+</div>

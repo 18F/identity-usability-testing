@@ -107,6 +107,10 @@ input::-webkit-inner-spin-button {
   width: 14px;
 }
 
+.indicator-big {
+  top: .5rem;
+}
+
 .checkbox input:checked ~ .indicator,
 .radio input:checked ~ .indicator, {
   background-color: $blue;

@@ -1,0 +1,41 @@
+---
+layout: default
+title: Get started
+permalink: /address/
+---
+
+<div class="container sm-pt4">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <form autocomplete="off" role="form" class="simple_form new_profile" id="new_profile" action="{{ "/address_phone_text/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <h1 class="h3 mt2">
+        How would you like to receive an address confirmation code?
+      </h1>
+      <p class="mb1" id="2fa-description">
+        To protect you from identity fraud, we need to send a code to validate ownership of this account.
+      </p>
+      <div class="mb1 mt4">
+        <label class="btn-border col-12 sm-col-8 sm-mr2 mb2">
+          <div class="radio">
+            <input type="radio" name="two_factor_setup_form[otp_method]" id="two_factor_setup_form_otp_method_sms" value="sms" checked="checked">
+            <span class="indicator indicator-big"></span>
+            <span class="fs-20p blue block bold mt0">Text message</span>
+            <span class="block">Get a code via text message (SMS)</span>
+           </div>
+        </label>
+        <label class="btn-border col-12 sm-col-8 sm-mr2 mb1">
+          <div class="radio">
+            <input type="radio" name="two_factor_setup_form[otp_method]" id="two_factor_setup_form_otp_method_voice" value="voice">
+            <span class="indicator indicator-big"></span>
+            <span class="fs-20p blue block bold mt0">Automated phone call</span>
+            <span class="block">Hear a code on your phone</span>
+          </div>
+        </label>
+      </div>
+      <div class="mb5 sm-col-6">
+        <a class="underline" href="{{ "/idv/cancel/" | prepend: site.baseurl }}">None of these options work for me</a>
+      </div>
+      <button class="btn btn-primary btn-wide" type="submit">Continue</button>
+      {% include cancel-identity.html %}
+    </form>
+  </div>
+</div>
