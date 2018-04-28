@@ -8,7 +8,16 @@
       <i class="block fa fa-envelope-o" aria-hidden="true" style="font-size:24px;"></i>
       <span class="block">Email</span>
     </a>
-    <a class="block silver py2 border-bottom h5 relative{% if page.sms_indicator == true %} hint--right hint--always hint--rounded hint--info{% endif %}" href="#" aria-label="577123 is your login.gov one-time passcode."{% if page.sms_indicator != true %} onclick="alert('No new text messages!');"{% endif %}>
+    <a class="block silver py2 border-bottom h5 relative{% if page.sms_indicator == true %} hint--right hint--always hint--rounded hint--info{% endif %}"
+        href="#"
+        aria-label="{% assign min = 111111 %}
+                    {% assign max = 999999 %}
+                    {% assign diff = max | minus: min %}
+                    {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+                    {{ randomNumber }} is your login.gov one-time passcode."
+        {% if page.sms_indicator != true %}
+          onclick="alert('No new text messages!');"
+        {% endif %}>
       {% if page.sms_indicator == true %}
         <div class="bg-red circle center overflow-hidden toolbox-indicator absolute bold h6">1</div>
       {% endif %}
