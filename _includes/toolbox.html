@@ -14,7 +14,12 @@
                     {% assign max = 999999 %}
                     {% assign diff = max | minus: min %}
                     {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-                    {{ randomNumber }} is your login.gov one-time passcode."
+                    {% assign randomNumberLong = randomNumber | append: '42'  %}
+                    {% if page.sms_indicator_long == true %}
+                      {{ randomNumberLong }} is your login.gov one-time passcode.
+                    {% else %}
+                      {{ randomNumber }} is your login.gov one-time passcode.
+                    {% endif %}"
         {% if page.sms_indicator != true %}
           onclick="alert('No new text messages!');"
         {% endif %}>
