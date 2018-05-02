@@ -27,7 +27,7 @@ permalink: /settings/recovery-code/
       <div class="left h5 mt2">
         Generated on <strong>{{ site.time | date: '%B %d %Y' }}</strong>
       </div>
-      <div class="right mt1"><img width="96" class="align-middle mt-tiny" src="/images/logo.svg" alt="Logo">
+      <div class="right mt1"><img width="96" class="align-middle mt-tiny" src="{{ "/images/logo.svg" | prepend: site.baseurl }}" alt="Logo">
       </div>
     </div>
     <form class="button_to" action="{{ "/idv/" | prepend: site.baseurl }}">
