@@ -13,7 +13,7 @@ sms_indicator: true
     <p class="mt-tiny mb0">
       We sent a security code to <strong><span id="two_factor_setup_form_phone"></span></strong>. This code will expire in 10 minutes.
     </p>
-    <form role="form" class="mt3" action="{{ "/settings/recovery-code/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+    <form role="form" class="mt3" action="{{ "/idv/" | prepend: site.baseurl }}" accept-charset="UTF-8">
       <label class="block bold" for="code">One-time security code</label>
       <div class="col-12 sm-col-5 mb4 sm-mb0 sm-mr-20p inline-block">
         <input type="text" name="code" id="code" required="required" autofocus="autofocus" pattern="[0-9]*" class="col-12 field monospace mfa" autocapitalize="off">
