@@ -1,0 +1,89 @@
+﻿	/*
+	General rules
+	*/
+
+	#slidedown_menu li{
+		list-style-type:none;
+		position:relative;
+	}
+	#slidedown_menu ul{
+		margin:0px;
+		padding:0px;
+		position:relative;
+
+	}
+
+	#slidedown_menu div{
+		margin:0px;
+		padding:0px;
+	}
+	/* 	Layout CSS */
+	#slidedown_menu{
+		width:225px;
+	}
+
+	/* All A tags - i.e menu items.*/ 
+	#slidedown_menu a{
+		color: #467aa7;
+		text-decoration:none;
+		display:block;
+		clear:both;
+		width:225px;
+		padding-left:2px;
+	}
+
+	/* Active menu item*/ 
+	#slidedown_menu .activeItem {
+		color: #DAA520;
+	}
+
+	/*
+	A tags
+	*/
+	#slidedown_menu .slMenuItem_depth1{	/* Main menu items */
+		margin-top:1px;
+		font: bold 95% Arial;
+	}
+	#slidedown_menu .slMenuItem_depth2{	/* Sub menu items */
+		margin-top:1px;
+		font: bold 85% Arial;
+	}
+	#slidedown_menu .slMenuItem_depth3{	/* Sub menu items */
+		margin-top:1px;
+		color:#467aa7;
+		font: italic bold 72% Arial ;
+	}
+	#slidedown_menu .slMenuItem_depth4{	/* Sub menu items */
+		margin-top:1px;
+	}
+	#slidedown_menu .slMenuItem_depth5{	/* Sub menu items */
+		margin-top:1px;
+	}
+
+	/* UL tags, i.e group of menu utems.
+	It's important to add style to the UL if you're specifying margins. If not, assign the style directly
+	to the parent DIV, i.e.
+
+	#slidedown_menu .slideMenuDiv1
+
+	instead of
+
+	#slidedown_menu .slideMenuDiv1 ul
+	*/
+
+	#slidedown_menu .slideMenuDiv1 ul{
+		padding:1px;
+		margin-left:1px;
+	}
+	#slidedown_menu .slideMenuDiv2 ul{
+		margin-left:5px;
+		padding:0px;
+	}
+	#slidedown_menu .slideMenuDiv3 ul{
+		margin-left:10px;
+		padding:1px;
+	}
+	#slidedown_menu .slMenuItem_depth4 ul{
+		padding:1px;
+		margin-left:15px;
+}
