@@ -1,0 +1,24 @@
+---
+layout: default
+title: Get started
+permalink: /error-no-ID/
+---
+
+<div class="container sm-pt3">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <form autocomplete="off" role="form" class="simple_form new_profile" id="new_profile" action="{{ "/idv/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+      <h1 class="h3 mt2">
+        We can’t verify your identity without a state-issued ID.
+      </h1>
+      <p class="mb5">We’re working hard to add more ways to verify your identity.</p>
+      <div class="pb-tiny bg-blue col-2">
+      </div>
+      <div class="mb1 mt2 pt1">
+        <p>Visit <a href="">Railroad Retirement Board</a> for more information.</p>
+        <p>To access your account in the future, you can <a href="">view your account here</a>.</p>
+      </div>
+      <button class="btn btn-primary btn-wide mt4" type="submit">Back</button>
+      <!-- {% include cancel-identity.html %} -->
+    </form>
+  </div>
+</div>
