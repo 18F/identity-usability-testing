@@ -31,7 +31,13 @@ progress: 4
       <div class="mb4">
 
         <div class="mb3 string required profile_ssn">
-          <label class="string required bold" for="profile_ssn"><abbr title="required" class="red display-none">*</abbr> Social Security Number</label><input class="string required ssn block sm-col-6 field" aria-labelledby="label-ssn" required="required" aria-required="true" pattern="^\d{3}-?\d{2}-?\d{4}$" type="text" name="profile[ssn]" id="profile_ssn">
+          <label class="string required bold" for="profile_ssn">
+            <abbr title="required" class="red display-none">*</abbr>
+              Social Security Number
+            <span class="hint--top hint--no-animate" aria-label="We ask for your Social Security number to help prove your identity. Some agencies we work with may need it to access your records." tabindex="0"><img width="16" class="px1 img-tooltip" src="{{ "/images/tooltip.svg" | prepend: site.baseurl }}" alt="Tooltip"></span>
+          </label>
+          <input class="string required ssn block sm-col-6 field" aria-labelledby="label-ssn" required="required" aria-required="true" pattern="^\d{3}-?\d{2}-?\d{4}$" type="text" name="profile[ssn]" id="profile_ssn">
+
         </div>
       </div>
       <h1 class="h3 my0 pb0">
