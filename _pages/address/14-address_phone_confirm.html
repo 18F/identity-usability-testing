@@ -3,7 +3,6 @@ layout: default
 title: Get started
 permalink: /address_phone_confirm/
 sms_indicator: true
-sms_indicator_long: true
 ---
 
 <div class="container sm-pt3">
@@ -22,7 +21,7 @@ sms_indicator_long: true
           <a href="#">Send another code</a>
         </p>
         <p class="mb1">
-          <a href="#">Use a different phone number</a>
+          <a href="{{ "/address_phone_text/" | prepend: site.baseurl }}">Use a different phone number</a>
         </p>
       </div>
       <button class="btn btn-primary btn-wide" type="submit">Continue</button>
