@@ -1,5 +1,5 @@
-{% if page.toolbox != false %}
-  <div id="toolbox" class="absolute bg-black center top-0 left-0 sm-show">
+{% if page.toolbox == true %}
+  <div id="toolbox" class="absolute bg-black center top-0 left-0">
     <h5 class="silver caps sans-serif py2">Toolbox</h5>
     <a class="block silver py2 border-top border-bottom h5 relative" href="{% if page.email_indicator == true %}{{ page.email_link | prepend: site.baseurl }}{% else %}#{% endif %}"{% if page.email_indicator != true %} onclick="alert('No new emails!');"{% endif %}>
       {% if page.email_indicator == true %}
