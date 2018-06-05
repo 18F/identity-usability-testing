@@ -12,7 +12,7 @@ permalink: /recovery/
     <p class="mt-tiny mb0" id="code-instructs">
       Choose a security option from the methods you have previously set up.
     </p>
-    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt3 new_two_factor_options_form" id="new_two_factor_options_form" action="/two_factor_options" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden">
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt3 new_two_factor_options_form" id="new_two_factor_options_form" action="{{ "/login/two-factor/sms-none/" | prepend: site.baseurl }}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden">
       <div class="mb3">
         <fieldset class="m0 p0 border-none">
           <legend class="mb1 h4 serif bold">Select an option to secure your account:</legend>
@@ -32,15 +32,13 @@ permalink: /recovery/
       </div>
       <input type="submit" name="commit" value="Continue" class="btn btn-primary" data-disable-with="Continue">
     </form>
-    <div class="mt4 mb6 pb6">
-      <div class="mt2 pt1 border-top">
+    <div class="mt3 mb6 pb6">
         <p class="mt2 mb0">
           If you cannot use any of the security options above,
         </p>
         <p>
-          <a href="#">learn about the account reset process.</a>
+          <a href="{{ "/recovery/reset/" | prepend: site.baseurl }}">learn about the account reset process.</a>
         </p>
-      </div>
     </div>
     <div class="mt2 pt1 border-top"><a class="h5" href="{{ "/login/two-factor/sms-none/" | prepend: site.baseurl }}">< Back</a></div>
   </div>
