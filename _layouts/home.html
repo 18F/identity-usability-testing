@@ -5,17 +5,17 @@ layout: default
 <div class="container sm-pt3">
   <div class="px2 py3 sm-py4 sm-px6 mx-auto sm-mb5 border-box card">
     {{ content }}
-    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt3 new_user" id="new_user" action="{{ "/users/sign_up/" | prepend: site.baseurl }}" accept-charset="UTF-8">
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt3 new_user" id="new_user" accept-charset="UTF-8">
     <div class="center">
       <img alt="images" class="mb2 center" width="350" src="{{ "/images/partner@3x.png" | prepend: site.baseurl }}">
     </div>
         <h1 class="h3 mb3 regular sm-col-12"><strong>The Railroad Retirement Board</strong> is using login.gov to allow you to sign in to your account safely and securely.</h1>
         <div class="center">
           <div>
-          <button class="btn btn-primary btn-wide mb2" type="submit">Create an account</button>
+          <button class="btn btn-primary btn-wide mb2" formaction="{{ "/users/sign_up/" | prepend: site.baseurl }}" type="submit">Create an account</button>
         </div>
         <div>
-          <button class="btn btn-border btn-wide mb2" type="submit">Sign in</button>
+          <button class="btn btn-border btn-wide mb2" formaction="{{ "/users/sign_in/" | prepend: site.baseurl }}"type="submit">Sign in</button>
         </div>
           <div class="sm-col-10 col-12 mx-auto">
             <a href="#">Back to rrb.gov</a>

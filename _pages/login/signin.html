@@ -1,0 +1,24 @@
+---
+layout: default
+title: Sign up for a account
+permalink: /users/sign_in/
+---
+
+<div class="container sm-pt3">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto mb5 border-box card">
+    <h1 class="h3 my0">
+      Sign in
+    </h1>
+    <form autocomplete="off" role="form" class="simple_form mt3 new_user" id="new_user" action="{{ "/login/two-factor/sms-none/" | prepend: site.baseurl }}" accept-charset="UTF-8" method="get">
+      <div class="mb4 email required user_email">
+        <label class="email required bold" for="user_email"><abbr title="required" class="red display-none">*</abbr> Email address</label><input aria-describedby="email-description" class="string email required block col-12 field" required="required" aria-required="true" type="email" value="" name="user[email]" id="user_email">
+      </div>
+      <div class="mb3 password required user_password">
+        <label class="password required bold" for="user_password"><abbr title="required" class="red display-none">*</abbr> Password</label><input class="password required block col-12 field ignore" required="required" aria-required="true" type="password" name="user[password]" id="user_password">
+      </div>
+      <p class="mt1 mb1"><a target="_blank" href="https://www.login.gov/policy">Security Practices and Privacy Act Statement</a></p>
+      <input type="submit" name="commit" value="Next" class="btn btn-primary btn-wide mt1 mb1">
+    </form>
+    {% include cancel.html %}
+  </div>
+</div>

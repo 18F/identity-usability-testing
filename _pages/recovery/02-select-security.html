@@ -1,0 +1,47 @@
+---
+layout: default
+title: Select a security option
+permalink: /recovery/
+---
+
+<div class="container sm-pt3">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h1 class="h3 my0">
+      Select a security option
+    </h1>
+    <p class="mt-tiny mb0" id="code-instructs">
+      Choose a security option from the methods you have previously set up.
+    </p>
+    <form autocomplete="off" role="form" class="simple_form mt3 sm-mt3 new_two_factor_options_form" id="new_two_factor_options_form" action="/two_factor_options" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden">
+      <div class="mb3">
+        <fieldset class="m0 p0 border-none">
+          <legend class="mb1 h4 serif bold">Select an option to secure your account:</legend>
+          <label class="btn-border col-12 mb1" for="two_factor_options_form_otp_delivery_preference_sms"><div class="radio"><input type="radio" name="two_factor_options_form[otp_delivery_preference]" id="two_factor_options_form_otp_delivery_preference_sms" value="sms" class="otp_delivery_preference_sms" checked="checked"><span class="indicator mt-half"></span><span class="blue bold fs-20p">Text message / SMS</span>
+            <div class="regular gray-dark fs-16p mb-half">Get your security code via text message / SMS.</div></div>
+          </label>
+          <label class="btn-border col-12 mb1" for="two_factor_options_form_otp_delivery_preference_voice"><div class="radio"><input type="radio" name="two_factor_options_form[otp_delivery_preference]" id="two_factor_options_form_otp_delivery_preference_voice" value="voice" class="otp_delivery_preference_voice"><span class="indicator mt-half"></span><span class="blue bold fs-20p">Phone call</span>
+            <div class="regular gray-dark fs-16p mb-half">Get your security code via phone call.</div></div>
+          </label>
+          <label class="btn-border col-12 mb1" for="two_factor_options_form_otp_delivery_preference_auth_app"><div class="radio"><input type="radio" name="two_factor_options_form[otp_delivery_preference]" id="two_factor_options_form_otp_delivery_preference_auth_app" value="auth_app" class="otp_delivery_preference_auth_app"><span class="indicator mt-half"></span><span class="blue bold fs-20p">Authentication application</span>
+            <div class="regular gray-dark fs-16p mb-half">Set up an authentication application to get your security code without providing a phone number.</div></div>
+          </label>
+          <label class="btn-border col-12 mb1" for="two_factor_options_form_otp_delivery_preference_personal_key"><div class="radio"><input type="radio" name="two_factor_options_form[otp_delivery_preference]" id="two_factor_options_form_otp_delivery_preference_personal_key" value="personal_key" class="otp_delivery_preference_personal_key"><span class="indicator mt-half"></span><span class="blue bold fs-20p">Personal Key</span>
+            <div class="regular gray-dark fs-16p mb-half">12 character recovery code you received at account creation. (Once you use this you will need a new key)</div></div>
+          </label>
+        </fieldset>
+      </div>
+      <input type="submit" name="commit" value="Continue" class="btn btn-primary" data-disable-with="Continue">
+    </form>
+    <div class="mt4 mb6 pb6">
+      <div class="mt2 pt1 border-top">
+        <p class="mt2 mb0">
+          If you cannot use any of the security options above,
+        </p>
+        <p>
+          <a href="#">learn about the account reset process.</a>
+        </p>
+      </div>
+    </div>
+    <div class="mt2 pt1 border-top"><a class="h5" href="{{ "/login/two-factor/sms-none/" | prepend: site.baseurl }}">< Back</a></div>
+  </div>
+</div>

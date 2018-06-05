@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Enter the secure one-time passcode
-permalink: /login/two-factor/sms/
-sms_indicator: true
+permalink: /login/two-factor/sms-none/
 ---
 
 <div class="container sm-pt3">
@@ -19,13 +18,16 @@ sms_indicator: true
         <input type="text" name="code" id="code" required="required" autofocus="autofocus" pattern="[0-9]*" class="col-12 field monospace mfa" aria-describedby="code-instructs">
       </div><input type="submit" name="commit" value="Submit" class="btn btn-primary align-top">
     </form>
-    <div class="mt3 mb1">
-      <p class="mb1">
-        <a href="#">Call me with the code instead</a>
-      </p>
-      <p class="mb1">
-        Didn't receive a code? <a href="#">Send a new one</a>
-      </p>
+    <div class="mt4 mb6 pb6">
+      <div class="mt2 pt1 border-top">
+        <p class="mt2 mb0">
+          Don't have access to your phone right now?
+        </p>
+        <p>
+          <a href="{{ "/recovery/" | prepend: site.baseurl }}">Choose another security option.</a>
+        </p>
+      </div>
     </div>
+    {% include cancel.html %}
   </div>
 </div>
