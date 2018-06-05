@@ -1,0 +1,49 @@
+---
+layout: default
+title: Enter the secure one-time passcode
+permalink: /recovery/reset/
+---
+
+<div class="container sm-pt3">
+  <div class="px2 py3 sm-py5 sm-px6 mx-auto sm-mb5 border-box card">
+    <h1 class="h3 my0">
+      Account reset
+    </h1>
+    <p class="mt-tiny mb3">
+      Resetting your account is an irreversible action, so making sure this is the action you want to take is very important. Please review the information below before continuing.
+    </p>
+
+    <h1 class="h4">
+      Step 1: Don’t have your personal Key?
+    </h1>
+    <p class="mt-tiny mb0">
+      Your personal key is a 12 character/number code that was given to you at account creation as a recovery method. You were told to either print it out or write it down somewhere—see example below.
+    </p>
+
+    <img class="pt3 pb0" src="{{ "/images/personal-key-example.png" | prepend: site.baseurl }}">
+
+    <p class="mt-tiny mb4">
+      If you found your personal key, you can <a href="{{ "/recovery/" | prepend: site.baseurl }}">use it to access your account.</a>
+    </p>
+
+    <h1 class="h4">
+      Step 2: Account reset
+    </h1>
+    <p class="mt-tiny">
+      <strong>If you are sure you don’t have access to any of your other security options, and did not save your personal key, the only option you have is to delete your account and create a new one</strong>, a process called account reset. This action is irreversible, and will disconnect all…
+    </p>
+    <p class="mt-tiny mb5">
+      <strong>For your security, there is a 24 hour delay</strong> for account deletion and reset, once the process is started.
+    </p>
+
+    <p class="mt-tiny mb2">
+      <strong>Are you positive you do not have access to any of the authentication methods OR your personal key?</strong>
+    </p>
+    <form class="pb2">
+      <button type="submit" name="commit" class="btn btn-primary" formaction="{{ "/recovery/" | prepend: site.baseurl }}">No, back to security options</button>
+      <button type="submit" name="commit" class="btn btn-border py3 regular blue">Yes, continue</button>
+    </form>
+
+    <div class="mt4 pt1 border-top"><a class="h5" href="{{ "/recovery/" | prepend: site.baseurl }}">< Back</a></div>
+  </div>
+</div>
